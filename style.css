@@ -1,29 +1,21 @@
-/* Reset & Base Styles */
-html, body {
+body {
     height: 100%;
     margin: 0;
     padding: 0;
-    scroll-behavior: smooth; /* optional: smooth scrolling for links */
-    overflow-x: hidden; /* prevent sideways scroll */
-}
-
-body {
     font-family: 'Inter', sans-serif;
     background-color: #f9f9f9;
     color: #333;
     line-height: 1.6;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start; /* ensures page starts at top */
-    align-items: center; /* center horizontally */
     min-height: 100vh;
 }
 
 * {
     box-sizing: border-box;
 }
-
 /* Smooth animations */
+
 .fade-in {
     opacity: 0;
     transform: translateY(20px);
@@ -36,8 +28,8 @@ body {
         transform: translateY(0);
     }
 }
-
 /* Header */
+
 header {
     background-color: #0d1117;
     color: white;
@@ -56,8 +48,8 @@ header {
         color: #8b949e;
         margin-top: 0.5rem;
     }
-
 /* Navigation */
+
 nav {
     background-color: #161b22;
     display: flex;
@@ -82,8 +74,8 @@ nav {
             color: #58a6ff;
             transform: translateY(-2px);
         }
-
 /* Sections */
+
 section {
     max-width: 1000px;
     margin: 4rem auto;
@@ -107,11 +99,11 @@ h2 {
         margin-top: 0.5rem;
         border-radius: 2px;
     }
-
 /* Project section */
+
 .projects-wheel {
     position: relative;
-    height: calc(85vh * 3); /* number of projects * scrolling distance */
+    height: calc(100vh * 3); /* number of projects * 100vh */
     margin: 4rem 0;
     padding: 0;
 }
@@ -124,14 +116,11 @@ h2 {
 
 .wheel-stage {
     position: sticky;
-    top: 8vh; /* slightly higher so projects sit closer to center */
-    height: 84vh; /* reduced scrolling gap */
+    top: 12vh;
+    height: 76vh;
     max-width: 1000px;
     margin: 0 auto;
     padding: 0 1rem;
-    display: flex;
-    align-items: center; /* center vertically inside the stage */
-    justify-content: center;
 }
 
 .wheel-slide {
@@ -139,7 +128,6 @@ h2 {
     inset: 0;
     display: flex;
     align-items: center;
-    justify-content: center;
     gap: 2rem;
     opacity: 0;
     transform: translateY(24px);
@@ -172,8 +160,8 @@ h2 {
         color: #555;
         margin: 0;
     }
-
 /* Mobile stacking */
+
 @media (max-width: 768px) {
     .wheel-slide {
         flex-direction: column;
@@ -185,8 +173,8 @@ h2 {
             margin-bottom: 1rem;
         }
 }
-
 /* Contact */
+
 #contact p a {
     color: #58a6ff;
     text-decoration: none;
@@ -196,8 +184,8 @@ h2 {
     #contact p a:hover {
         color: #1f6feb;
     }
-
 /* Footer */
+
 footer {
     text-align: center;
     padding: 2rem 1rem;
@@ -207,8 +195,8 @@ footer {
     margin-top: auto;
     animation: fadeInUp 1.5s ease forwards;
 }
-
 /* Responsive Navigation */
+
 @media (max-width: 600px) {
     nav {
         flex-direction: column;
