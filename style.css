@@ -99,7 +99,7 @@ h2 {
         margin-top: 0.5rem;
         border-radius: 2px;
     }
-/* Project section */
+/* Project section */ /* --- Projects Wheel (one-at-a-time, same position) --- */
 
 .projects-wheel {
     position: relative;
@@ -160,8 +160,8 @@ h2 {
         color: #555;
         margin: 0;
     }
-/* Mobile stacking */
 
+/* Mobile stacking */
 @media (max-width: 768px) {
     .wheel-slide {
         flex-direction: column;
@@ -173,6 +173,7 @@ h2 {
             margin-bottom: 1rem;
         }
 }
+
 /* Contact */
 
 #contact p a {
@@ -203,4 +204,3 @@ footer {
         gap: 1rem;
     }
 }
-/*end*/
