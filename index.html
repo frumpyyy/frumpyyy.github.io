@@ -1,107 +1,24 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Nathan Moody | Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/style.css">
-</head>
-<body>
-    <!-- This is the wrapper div -->
-    <header>
-        <h1>Nathan Moody</h1>
-        <p>Programmer</p>
-    </header>
+    <title>nathanmoody-gamedeveloper</title>
+    <meta name="description" content="Lovable Generated Project" />
+    <meta name="author" content="Lovable" />
 
-    <nav>
-        <a href="#about">About</a>
-        <a href="allprojects.html">Projects</a>
-        <a href="#contact">Contact</a>
-    </nav>
+    <meta property="og:title" content="nathanmoody-gamedeveloper" />
+    <meta property="og:description" content="Lovable Generated Project" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
 
-    <section id="about">
-        <h2>About Me</h2>
-        <p>
-            I'm a passionate programmer with experience in full-stack development, game design, and software engineering.
-            I enjoy building useful, beautiful tools and solving real-world challenges through code.
-        </p>
-    </section>
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@lovable_dev" />
+    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+  </head>
 
-    <section id="projects" class="projects-wheel">
-        <h2>Featured Projects</h2>
-        <div class="wheel-stage">
-            <article class="wheel-slide">
-                <img src="images/project1.png" alt="Project 1">
-                <div class="copy">
-                    <h3>Project One</h3>
-                    <p>A short description of project one. Explains what it does.</p>
-                </div>
-            </article>
-
-            <article class="wheel-slide">
-                <img src="images/project2.png" alt="Project 2">
-                <div class="copy">
-                    <h3>Project Two</h3>
-                    <p>A short description of project two. Explains what it does.</p>
-                </div>
-            </article>
-
-            <article class="wheel-slide">
-                <img src="images/project3.png" alt="Project 3">
-                <div class="copy">
-                    <h3>Project Three</h3>
-                    <p>A short description of project three. Explains what it does.</p>
-                </div>
-            </article>
-        </div>
-    </section>
-
-
-
-
-
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>
-            Email me at <strong>your.email@example.com</strong> or visit my
-            <a href="https://github.com/yourusername" target="_blank">GitHub</a>.
-        </p>
-    </section>
-
-    <footer>
-        &copy; 2025 Nathan Moody. All rights reserved.
-    </footer>
-
-    <script>
-        (() => {
-            const section = document.querySelector('.projects-wheel');
-            const slides = Array.from(section.querySelectorAll('.wheel-slide'));
-
-            // Set section height dynamically based on number of slides
-            section.style.height = `${slides.length * 100}vh`;
-
-            const updateActive = () => {
-                const scrollTop = window.scrollY;
-                const sectionTop = section.offsetTop;
-                const sectionHeight = section.offsetHeight - window.innerHeight;
-                let progress = (scrollTop - sectionTop) / sectionHeight;
-                progress = Math.min(Math.max(progress, 0), 1);
-                const index = Math.floor(progress * slides.length);
-
-                slides.forEach((slide, i) => {
-                    slide.classList.toggle('active', i === index);
-                });
-            };
-
-            window.addEventListener('scroll', updateActive);
-            window.addEventListener('resize', updateActive);
-
-            updateActive(); // init
-        })();
-    </script>
-
-
-</body>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
 </html>
-
